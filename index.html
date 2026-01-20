@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeSlice Web Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.jpg" alt="CodeSlice Web Solutions">
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+
+    <nav id="navMenu">
+      <a href="#services">Services</a>
+      <a href="#templates">Templates</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="btn">Get Started</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Professional Websites That Get You More Customers</h1>
+    <p>Fast, modern, and mobile-friendly websites designed to help your business look professional and grow online.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn">Get Your Website</a>
+      <a href="#templates" class="btn-outline">View Templates</a>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust">
+    <span>✔ Fast Delivery</span>
+    <span>✔ Mobile Friendly</span>
+    <span>✔ SEO Ready</span>
+    <span>✔ Clear Pricing</span>
+    <span>✔ Direct Support</span>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2>What I Do</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Website Design</h3>
+        <p>Clean, modern websites for businesses, brands, and professionals.</p>
+      </div>
+      <div class="card">
+        <h3>Website Redesign</h3>
+        <p>Upgrade outdated websites to look modern and professional.</p>
+      </div>
+      <div class="card">
+        <h3>Deployment & Hosting</h3>
+        <p>GitHub & Netlify setup, domain connection, and guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMPLATES -->
+  <section id="templates" class="section dark">
+    <h2>Website Templates</h2>
+    <p>Choose from professionally designed templates you can preview live.</p>
+
+    <div class="cards templates-grid">
+
+      <div class="template-card">
+        <img src="assets/templates/business.png" alt="Business Website Template">
+        <h3>Business Website</h3>
+        <p>Ideal for companies and professional services.</p>
+        <div class="template-actions">
+          <button onclick="openPreview('https://codeslicewebsolutions.github.io/Plumbing-Template-2/')">Live Preview</button>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <img src="assets/templates/service.png" alt="Service Website Template">
+        <h3>Service Website</h3>
+        <p>Perfect for plumbers, electricians, and freelancers.</p>
+        <div class="template-actions">
+          <button onclick="openPreview('https://codeslicewebsolutions.github.io/Consulting-Template-1/')">Live Preview</button>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <img src="assets/templates/personal.png" alt="Personal Brand Template">
+        <h3>Personal Brand</h3>
+        <p>Showcase yourself and your work professionally.</p>
+        <div class="template-actions">
+          <button onclick="openPreview('https://codeslicewebsolutions.github.io/Construction-Template-1/')">Live Preview</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEMPLATE PREVIEW MODAL -->
+  <div id="previewModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePreview()">×</span>
+      <iframe id="previewFrame"></iframe>
+    </div>
+  </div>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About CodeSlice</h2>
+    <p>
+      CodeSlice Web Solutions was created to help businesses look professional online
+      without stress or confusion. I focus on clarity, quality, and honest communication.
+    </p>
+  </section>
+
+  <!-- LIVE PROJECTS / PORTFOLIO -->
+  <section class="section">
+    <h2>Featured Live Websites</h2>
+    <p>A selection of real websites built by CodeSlice Web Solutions.</p>
+
+    <div class="cards portfolio-grid">
+
+      <div class="portfolio-card">
+        <img src="assets/portfolio/plumbing.png" alt="">
+        <h3>Just Plumbing Solutions</h3>
+        <a href="https://justplumbingsolutions.netlify.app/" target="_blank" class="btn">Visit Website</a>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="assets/portfolio/sakhiksasa.png" alt="">
+        <h3>Sakhiksasa Foundation</h3>
+        <a href="https://sakhiksasafoundation.org/" target="_blank" class="btn">Visit Website</a>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="assets/portfolio/onthego.png" alt="">
+        <h3>On The Go Construction</h3>
+        <a href="https://www.onthegoconstruction.co.za" target="_blank" class="btn">Visit Website</a>
+      </div>
+
+      
+
+    </div>
+
+    <br>
+    <a href="portfolio.html" class="btn">View Full Portfolio (50+)</a>
+  </section>
+
+
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section dark">
+    <h2>Client Feedback</h2>
+    <div class="cards">
+      <div class="card review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Simple process and great communication. My website looks amazing."</p>
+        <span>- Business Owner</span>
+      </div>
+      <div class="card review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Very professional and fast delivery. Highly recommended."</p>
+        <span>- Local Client</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Get Your Website</h2>
+    <p>Tell me what you need and I’ll get back to you.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="What website do you need?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 CodeSlice Web Solutions. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

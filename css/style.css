@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0f1a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #00aaff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+}
+
+.btn-outline {
+  border: 2px solid #00aaff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #00aaff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+/* TRUST */
+.trust {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #10162a;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section.dark {
+  background: #10162a;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #151b33;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  padding: 12px;
+  background: #00aaff;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #05080f;
+}
+
+/* TEMPLATE CARDS */
+.templates-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.template-card {
+  background: #151b33;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+  transform: translateY(-5px);
+}
+
+.template-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.template-card h3 {
+  margin: 15px;
+}
+
+.template-card p {
+  margin: 0 15px 15px;
+  font-size: 0.9rem;
+}
+
+.template-actions {
+  padding: 15px;
+}
+
+.template-actions button {
+  width: 100%;
+  padding: 10px;
+  background: #00aaff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+}
+
+.modal-content {
+  width: 90%;
+  height: 90%;
+  margin: 3% auto;
+  background: #000;
+  position: relative;
+  border-radius: 10px;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.portfolio-filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-filters button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  background: #151b33;
+  color: white;
+  border-radius: 5px;
+}
+
+.portfolio-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* PORTFOLIO CARD IMAGE FIX */
+.portfolio-card img {
+  width: 100%;
+  height: 160px;          /* 👈 controls image size */
+  object-fit: cover;     /* 👈 crops instead of stretching */
+  display: block;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #0b0f1a;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .navbar nav a {
+    margin: 15px 0;
+    font-size: 1.1rem;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+}
+
+
